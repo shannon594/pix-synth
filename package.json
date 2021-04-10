@@ -4,11 +4,12 @@
   "description": "",
   "main": "server/dist/main.js",
   "scripts": {
-    "start": "tsc --build server/tsconfig.json && nodemon server/dist/main.js",
+    "start-server": "tsc --build server/tsconfig.json && nodemon server/dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .ts",
-    "startwp": "webpack serve --open",
-    "build": "webpack --mode production"
+    "start-react": "webpack serve --open",
+    "build-react": "webpack --mode production",
+    "build-and-run-all": "webpack --mode production && tsc --build server/tsconfig.json && nodemon server/dist/main.js"
   },
   "repository": {
     "type": "git",
