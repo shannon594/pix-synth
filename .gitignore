@@ -2,5 +2,5 @@ node_modules
 *.log*
 .vscode
 package-lock.json
-app/dist
-server/dist
+app/dist/**/*
+server/dist/**/*
