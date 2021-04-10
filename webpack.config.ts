@@ -21,6 +21,10 @@ const config: webpack.Configuration = {
           },
         },
       },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
     ],
   },
   resolve: {
@@ -44,7 +48,8 @@ const config: webpack.Configuration = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: "app/static/", to: "" },
+        { from: "app/static/html", to: "" },
+        { from: "app/static/img", to: "img" },
       ],
     }),
   ],
